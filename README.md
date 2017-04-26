@@ -56,7 +56,7 @@ Machine Learning for Design, An practice approach (for Course and / or Publish)
   * We will likely branch out into python when using some machine learning frameworks (like tensorflow).
 
 ## 术语
-[Statistics and machine learning glossary](https://github.com/shiffman/NOC-S17-2-Intelligence-Learning/wiki/Glossary:-Statistics-and-ML) from the repo wiki.
+[统计学习和机器学习术语一览](https://github.com/lymanzhang/Machine-Learning-for-Design/wiki/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%9A%E6%9C%AF%E8%AF%AD%E4%B8%80%E8%A7%88) from the repo wiki.
 
 Wikipedia links:
   * [Sample](https://en.wikipedia.org/wiki/Sample_(statistics))
