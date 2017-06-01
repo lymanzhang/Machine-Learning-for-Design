@@ -182,7 +182,7 @@ rides[:24*10].plot(x='dteday', y='cnt')
 
 
 
-![png](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/project01_the_first_nn/output_6_1.png)
+![output_6_1.png](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/project01_the_first_nn/output_6_1.png)
 
 
 ### 虚拟变量（哑变量）
@@ -683,7 +683,7 @@ _ = plt.ylim()
 ```
 
 
-![png](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/project01_the_first_nn/output_22_0.png)
+![output_22_0.png](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/project01_the_first_nn/output_22_0.png)
 
 
 ## 检查预测结果
@@ -708,7 +708,7 @@ _ = ax.set_xticklabels(dates[12::24], rotation=45)
 ```
 
 
-![png](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/project01_the_first_nn/output_24_0.png)
+![output_24_0.png](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/project01_the_first_nn/output_24_0.png)
 
 
 ## 可选：思考下你的结果（我们不会评估这道题的答案）
