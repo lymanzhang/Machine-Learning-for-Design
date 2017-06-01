@@ -2,10 +2,10 @@
 Machine Learning for Design, An practice approach (for Course and / or Publish)
 面向设计的机器学习实践
 
-reference
-Session01-06 -> [Learning scikit-learn: Machine Learn in Python](https://www.amazon.com/Learning-scikit-learn-Machine-Python/dp/1783281936/ref=sr_1_1?ie=UTF8&qid=1496357979&sr=8-1&keywords=Learning+scikit-learn%3A+Machine+Learn+in+Python)
-part01-06 -> DanShiffman
-Project01-05 -> DLND2017
+## Reference
+- Session01-06 -> [Learning scikit-learn: Machine Learn in Python](https://www.amazon.com/Learning-scikit-learn-Machine-Python/dp/1783281936/ref=sr_1_1?ie=UTF8&qid=1496357979&sr=8-1&keywords=Learning+scikit-learn%3A+Machine+Learn+in+Python)
+- Part01-06 -> DanShiffman
+- Project01-05 -> DLND2017
 
 ## 课程目的
   * 为基于数据的设计实践/数据驱动的设计建立方法系统，为数据驱动的用户研究（User Positioning）、设计生成（Generative Design）、设计决策（Design Dicision making and Evalution）探索新的路径。
