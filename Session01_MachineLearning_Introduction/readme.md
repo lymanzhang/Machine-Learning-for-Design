@@ -211,7 +211,7 @@ nosetests -v sklearn
 
 #### 安装pandas和matplotlib库
 
-本书还会用到[pandas] (http://pandas.pydata.org/pandas-docs/stable/index.html)库，是一个开源Python数据分析工具。Windows，Linux和Mac OS系统都可以用pip安装：
+本书还会用到[pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)库，是一个开源Python数据分析工具。Windows，Linux和Mac OS系统都可以用pip安装：
 
 ```python
 pip install pandas
