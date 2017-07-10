@@ -12,9 +12,7 @@
 
 计算机科学家[Tom Mitchell](http://www.cs.cmu.edu/~tom/)曾经对机器学习给出过一个更为正式的定义：一个程序在完成任务T后获得了经验E，其表现为效果P，如果它完成任务T的效果是P ，那么会获得经验E。例如，假设你有一些图片，每个图片里是一条狗或一只猫。程序可以通过观察图片来学习，然后它可以通过计算图片正确分类比例来评估学习效果。
 
-> [机器学习](http://product.dangdang.com/693723.html?_ddclickunion=P-306226-0-s1102235|ad_type=0|sys_id=1#dd_refer=https%3A%2F%2Fbook.douban.com%2Flink2%2F%3Flowest%3D2760%26pre%3D0%26vendor%3Ddangdang%26srcpage%3Dsubject%26price%3D2760%26pos%3D2%26url%3Dhttp%253a%252f%252funion.dangdang.com%252ftransfer.php%253ffrom%253dp-306226-0-s1102235%2526backurl%253dhttp%253a%252f%252fproduct.dangdang.com%252fproduct.aspx%253fproduct_id%253d693723%26cntvendor%3D2%26srcsubj%3D1102235%26type%3Dbkbuy%26subject%3D1102235)
-
-> 《机器学习》展示了机器学习中核心的算法和理论，并阐明了算法的运行过程。《机器学习》综合了许多的研究成果，例如统计学、人工智能、哲学、信息论、生物学、认知科学、计算复杂性和控制论等，并以此来理解问题的背景、算法和其中的隐含假定。
+> [机器学习](http://product.dangdang.com/693723.html?_ddclickunion=P-306226-0-s1102235|ad_type=0|sys_id=1#dd_refer=https%3A%2F%2Fbook.douban.com%2Flink2%2F%3Flowest%3D2760%26pre%3D0%26vendor%3Ddangdang%26srcpage%3Dsubject%26price%3D2760%26pos%3D2%26url%3Dhttp%253a%252f%252funion.dangdang.com%252ftransfer.php%253ffrom%253dp-306226-0-s1102235%2526backurl%253dhttp%253a%252f%252fproduct.dangdang.com%252fproduct.aspx%253fproduct_id%253d693723%26cntvendor%3D2%26srcsubj%3D1102235%26type%3Dbkbuy%26subject%3D1102235)是TOM M.Mitchell撰写的一本教材，该教材展示了机器学习中核心的算法和理论，并阐明了算法的运行过程。《机器学习》综合了许多的研究成果，例如统计学、人工智能、哲学、信息论、生物学、认知科学、计算复杂性和控制论等，并以此来理解问题的背景、算法和其中的隐含假定。。他是卡内基梅隆大学的教授，美国《Machine Leaming》杂志、国际机器学习年度会议（ICML）的创始人；多种技术杂志的撰稿人，曾发表过许多文章，出版过多本专著，是机器学习领域的著名学者。
 
 我们将使用Mitchell的定义来组织这一章的内容。首先，我们要介绍形成经验的类型，包括监督学习和无监督学习。然后介绍机器学习系统可以处理的常见任务。最后介绍机器学习系统效果评估方式。
 
