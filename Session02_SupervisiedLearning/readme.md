@@ -50,6 +50,44 @@ plt.show()
 
 上图中，'x'轴表示行驶里程（公里），'y'轴表示高铁票价（人民币元）。能够看出，高铁票价与行驶里程正相关，这与我们的日常经验也比较吻合，票价自然是越远越贵。下面我们就用scikit-learn来构建模型。
 
+```python
+from sklearn.linear_model import LinearRegression
+# 创建并拟合模型
+model = LinearRegression()
+model.fit(X, y)
+print('预测一张600公里里程的高铁票的价格：￥%.0f' % model.predict([600])[0])
+print('预测一张600公里里程的高铁票的价格：￥%.0f' % model.predict([720])[0])
+```
 
+预测一张600公里里程的高铁票的价格：￥260
 
+预测一张600公里里程的高铁票的价格：￥308
+
+一元线性回归假设解释变量和响应变量之间存在线性关系；这个线性模型所构成的空间是一个超平面（hyperplane）。超平面是n维欧氏空间中余维度等于一的线性子空间，如平面中的直线、空间中的平面等，总比包含它的空间少一维。在一元线性回归中，一个维度是响应变量，另一个维度是解释变量，总共两维。因此，其超平面只有一维，就是一条线。
+
+上述代码中sklearn.linear_model.LinearRegression类是一个估计器（estimator）。
+
+估计器依据观测值来预测结果。在scikit-learn里面，所有的估计器都带有fit()和predict()方法。
+
+fit()用来分析模型参数，predict()是通过fit()算出的模型参数构成的模型，对解释变量进行预测获得的值。
+
+因为所有的估计器都有这两种方法，所有scikit-learn很容易实验不同的模型。
+
+LinearRegression类的fit()方法学习下面的一元线性回归模型：
+
+y = a + bx
+
+y表示响应变量的预测值，本例指高铁票价格预测值，是解释变量，本例指高铁行驶里程。截距和相关系数是线性回归模型最关心的事情。下图中的直线就高铁行驶里程与票价的线性关系。用这个模型，你可以计算不同里程的高铁票的价格，600公里票价为￥260元，720公里的票价为￥308元。
+
+```python
+plt = generateplt()
+plt.plot(X, y, 'k.')
+X2 = [[0], [180], [360], [600], [720], [850], [1000]]
+model = LinearRegression()
+model.fit(X, y)
+y2 = model.predict(X2)
+plt.plot(X, y, 'k.')
+plt.plot(X2, y2, 'g-')
+plt.show()
+```
 
