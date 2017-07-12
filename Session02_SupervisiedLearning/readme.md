@@ -322,6 +322,7 @@ y = a +β<sub>1</sub>x<sub>1</sub> + β<sub>2</sub>x<sub>2</sub> + β<sub>3</sub
 Y = β X
 
 多元线性回归可以写成如下形式：
+
 ![img](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/Session02_SupervisiedLearning/img_LinearRegression/%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92.JPG)
 
 其中，Y是训练集的响应变量列向量，β是模型参数列向量。X称为设计矩阵，是mXn维训练集的解释变量矩阵。m是训练集样本数量， n是解释变量个数。房屋价格预测模型的训练集如下表所示：
@@ -333,7 +334,7 @@ Y = Xβ
 
 矩阵没有除法运算（详见线性代数相关内容），所以用矩阵的转置运算和逆运算来实现：
 
-β = （X<sup>T</sup>X）<sup>-1</supX<sup>T</sup>Y
+β = （X<sup>T</sup>X）<sup>-1</sup>X<sup>T</sup>Y
 
 通过Numpy的矩阵操作就可以完成：
 
