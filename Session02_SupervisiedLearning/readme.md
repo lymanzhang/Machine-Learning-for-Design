@@ -46,7 +46,7 @@ plt.plot(X, y, 'k.')
 plt.show()
 ```
 
-![img]()
+![img](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/Session02_SupervisiedLearning/img_LinearRegression/%E9%AB%98%E9%93%81%E7%A5%A8%E4%BB%B7.png)
 
 上图中，'x'轴表示行驶里程（公里），'y'轴表示高铁票价（人民币元）。能够看出，高铁票价与行驶里程正相关，这与我们的日常经验也比较吻合，票价自然是越远越贵。下面我们就用scikit-learn来构建模型。
 
