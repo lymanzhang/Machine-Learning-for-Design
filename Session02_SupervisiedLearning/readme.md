@@ -430,5 +430,203 @@ R-squared: 0.77
 增加解释变量让模型拟合效果更好了。后面我们会论述一个问题：为什么只用一个测试集评估一个模型的效果是不准确的，如何通过将测试集数据分块的方法来测试，让模型的测试效果更可靠。不过现在我们可以认为，房屋价格预测问题，多元回归确实比一元回归效果更好。假如解释变量和响应变量的关系不是线性的呢？下面我们来研究一个特别的多元线性回归的情况，可以用来构建非线性关系模型。
 
 ### 多项式回归
-上例中，我们假设解释变量和响应变量的关系是线性的。真实情况未必如此。下面我们用多项式回归，一种特殊的多元线性回归方法，增加了指数项（ 的次数大于1）。现实世界中的曲线关系都是通过增加多项式实现的，其实现方式和多元线性回归类似。本例还用一个解释变量，匹萨直径。让我们用下面的数据对两种模型做个比较：
+上例中，我们假设解释变量和响应变量的关系是线性的。真实情况未必如此。下面我们用多项式回归，一种特殊的多元线性回归方法，增加了指数项（x的次数大于1）。现实世界中的曲线关系都是通过增加多项式实现的，其实现方式和多元线性回归类似。本例还用一个解释变量，房屋面积。让我们用下面的数据对两种模型做个比较：
 
+|训练样本|房屋面积（平方米）|房价（人民币万元）|
+|--|--|--|
+|1|60|70|
+|2|80|90|
+|3|100|130|
+|4|140|175|
+|5|180|180|
+
+测试样本如下：
+
+|训练样本|房屋面积（平方米）|房价（人民币万元）|
+|--|--|--|
+|1|60|70|
+|2|80|90|
+|3|100|130|
+|4|140|175|
+
+二次回归（Quadratic Regression），即回归方程有个二次项，公式如下：
+
+y = α + β<sub>1</sub>x + β<sub>2</sub>x<sup>2</sup>
+
+我们只用一个解释变量，但是模型有三项，通过第三项（二次项）来实现曲线关系。sklearn中的PolynomialFeatures转换器可以用来解决这个问题。代码如下：
+
+ ```python
+ %matplotlib inline
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+font = FontProperties(fname=r"c:\windows\fonts\msyh.ttc", size=10)
+
+def generateplt():
+    plt.figure()
+    plt.title('房屋价格与房屋面积',fontproperties=font)
+    plt.xlabel('面积（平方米）',fontproperties=font)
+    plt.ylabel('价格（人民币万元）',fontproperties=font)
+    plt.axis([0, 200, 0, 200])
+    plt.grid(True)
+    return plt
+
+plt = generateplt()
+
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+
+X_train = [[60], [80], [100], [140], [180]]
+y_train = [[70], [90], [130], [175], [180]]
+
+X_test = [[60], [80], [110], [160]]
+y_test = [[80], [120], [150], [180]]
+
+regressor = LinearRegression()
+regressor.fit(X_train, y_train)
+
+xx = np.linspace(0, 26, 100)
+yy = regressor.predict(xx.reshape(xx.shape[0], 1))
+
+# plt = generateplt()
+plt.plot(X_train, y_train, 'k.')
+plt.plot(xx, yy)
+
+quadratic_featurizer = PolynomialFeatures(degree=2)
+
+X_train_quadratic = quadratic_featurizer.fit_transform(X_train)
+X_test_quadratic = quadratic_featurizer.transform(X_test)
+
+regressor_quadratic = LinearRegression()
+regressor_quadratic.fit(X_train_quadratic, y_train)
+
+xx_quadratic = quadratic_featurizer.transform(xx.reshape(xx.shape[0], 1))
+
+plt.plot(xx, regressor_quadratic.predict(xx_quadratic), 'r-')
+plt.show()
+
+print(X_train)
+print(X_train_quadratic)
+print(X_test)
+print(X_test_quadratic)
+print('一元线性回归 r-squared', regressor.score(X_test, y_test))
+print('二次回归 r-squared', regressor_quadratic.score(X_test_quadratic, y_test))
+ ```
+ 
+ ![img]()
+ 
+[[60], [80], [100], [140], [180]]  
+[[  1.00000000e+00   6.00000000e+01   3.60000000e+03]  
+ [  1.00000000e+00   8.00000000e+01   6.40000000e+03]  
+ [  1.00000000e+00   1.00000000e+02   1.00000000e+04]  
+ [  1.00000000e+00   1.40000000e+02   1.96000000e+04]  
+ [  1.00000000e+00   1.80000000e+02   3.24000000e+04]]  
+ 
+[[60], [80], [110], [160]]  
+[[  1.00000000e+00   6.00000000e+01   3.60000000e+03]  
+ [  1.00000000e+00   8.00000000e+01   6.40000000e+03]  
+ [  1.00000000e+00   1.10000000e+02   1.21000000e+04]  
+ [  1.00000000e+00   1.60000000e+02   2.56000000e+04]]  
+ 
+一元线性回归 r-squared 0.809726797708  
+
+二次回归 r-squared 0.867544365635  
+
+效果如上图所示，直线为一元线性回归（R<sup>2</sup> = 0.81），曲线为二次回归（R<sup>2</sup> =0.87），其拟合效果更佳。还有三次回归，就是再增加一个立方项（β<sub>3</sub>x<sup>3</sup>）。同样方法拟合，效果如下图所示：
+
+```python
+plt = generateplt()
+
+plt.plot(X_train, y_train, 'k.')
+
+quadratic_featurizer = PolynomialFeatures(degree=2)
+X_train_quadratic = quadratic_featurizer.fit_transform(X_train)
+X_test_quadratic = quadratic_featurizer.transform(X_test)
+
+regressor_quadratic = LinearRegression()
+regressor_quadratic.fit(X_train_quadratic, y_train)
+
+xx_quadratic = quadratic_featurizer.transform(xx.reshape(xx.shape[0], 1))
+
+plt.plot(xx, regressor_quadratic.predict(xx_quadratic), 'b-')
+
+cubic_featurizer = PolynomialFeatures(degree=3)
+
+X_train_cubic = cubic_featurizer.fit_transform(X_train)
+X_test_cubic = cubic_featurizer.transform(X_test)
+
+regressor_cubic = LinearRegression()
+regressor_cubic.fit(X_train_cubic, y_train)
+
+xx_cubic = cubic_featurizer.transform(xx.reshape(xx.shape[0], 1))
+
+plt.plot(xx, regressor_cubic.predict(xx_cubic), 'r-')
+
+plt.show()
+
+
+print(X_train_cubic)
+print(X_test_cubic)
+print('二次回归 r-squared', regressor_quadratic.score(X_test_quadratic, y_test))
+print('三次回归 r-squared', regressor_cubic.score(X_test_cubic, y_test))
+```
+
+ ![img]()
+ 
+[[  1.00000000e+00   6.00000000e+01   3.60000000e+03   2.16000000e+05]  
+ [  1.00000000e+00   8.00000000e+01   6.40000000e+03   5.12000000e+05]  
+ [  1.00000000e+00   1.00000000e+02   1.00000000e+04   1.00000000e+06]  
+ [  1.00000000e+00   1.40000000e+02   1.96000000e+04   2.74400000e+06]  
+ [  1.00000000e+00   1.80000000e+02   3.24000000e+04   5.83200000e+06]]  
+ 
+[[  1.00000000e+00   6.00000000e+01   3.60000000e+03   2.16000000e+05]  
+ [  1.00000000e+00   8.00000000e+01   6.40000000e+03   5.12000000e+05]  
+ [  1.00000000e+00   1.10000000e+02   1.21000000e+04   1.33100000e+06]  
+ [  1.00000000e+00   1.60000000e+02   2.56000000e+04   4.09600000e+06]]  
+ 
+二次回归 r-squared 0.867544365635  
+三次回归 r-squared 0.835692415606
+
+
+从图中可以看出，三次回归经过的点更多，但是R<sup>2</sup>却没有二次回归高。下面我们再看一个更高阶的，七次回归，效果如下图所示：
+
+```python
+plt = generateplt()
+
+plt.plot(X_train, y_train, 'k.')
+
+quadratic_featurizer = PolynomialFeatures(degree=2)
+
+X_train_quadratic = quadratic_featurizer.fit_transform(X_train)
+X_test_quadratic = quadratic_featurizer.transform(X_test)
+
+regressor_quadratic = LinearRegression()
+regressor_quadratic.fit(X_train_quadratic, y_train)
+
+xx_quadratic = quadratic_featurizer.transform(xx.reshape(xx.shape[0], 1))
+
+plt.plot(xx, regressor_quadratic.predict(xx_quadratic), 'r-')
+
+seventh_featurizer = PolynomialFeatures(degree=7)
+
+X_train_seventh = seventh_featurizer.fit_transform(X_train)
+X_test_seventh = seventh_featurizer.transform(X_test)
+
+regressor_seventh = LinearRegression()
+regressor_seventh.fit(X_train_seventh, y_train)
+
+xx_seventh = seventh_featurizer.transform(xx.reshape(xx.shape[0], 1))
+
+plt.plot(xx, regressor_seventh.predict(xx_seventh))
+plt.show()
+
+print('二次回归 r-squared', regressor_quadratic.score(X_test_quadratic, y_test))
+print('七次回归 r-squared', regressor_seventh.score(X_test_seventh, y_test))
+```
+
+ ![img]()
+ 
+二次回归 r-squared 0.867544365635   
+七次回归 r-squared 0.487744074623   
+
+可以看出，七次拟合的RR<sup>2</sup>值更低，虽然其图形基本经过了所有的点。可以认为这是拟合过度（overfitting）的情况。这种模型并没有从输入和输出中推导出一般的规律，而是记忆训练集的结果，这样在测试集的测试效果就不好了。
