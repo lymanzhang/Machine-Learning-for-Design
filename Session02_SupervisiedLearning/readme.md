@@ -513,7 +513,7 @@ print('一元线性回归 r-squared', regressor.score(X_test, y_test))
 print('二次回归 r-squared', regressor_quadratic.score(X_test_quadratic, y_test))
  ```
  
- ![img]()
+ ![img](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/Session02_SupervisiedLearning/img_LinearRegression/%E6%88%BF%E4%BB%B71.png)
  
 [[60], [80], [100], [140], [180]]  
 [[  1.00000000e+00   6.00000000e+01   3.60000000e+03]  
@@ -571,7 +571,7 @@ print('二次回归 r-squared', regressor_quadratic.score(X_test_quadratic, y_te
 print('三次回归 r-squared', regressor_cubic.score(X_test_cubic, y_test))
 ```
 
- ![img]()
+ ![img](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/Session02_SupervisiedLearning/img_LinearRegression/%E6%88%BF%E4%BB%B72.png)
  
 [[  1.00000000e+00   6.00000000e+01   3.60000000e+03   2.16000000e+05]  
  [  1.00000000e+00   8.00000000e+01   6.40000000e+03   5.12000000e+05]  
@@ -624,7 +624,7 @@ print('二次回归 r-squared', regressor_quadratic.score(X_test_quadratic, y_te
 print('七次回归 r-squared', regressor_seventh.score(X_test_seventh, y_test))
 ```
 
- ![img]()
+ ![img](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/Session02_SupervisiedLearning/img_LinearRegression/%E6%88%BF%E4%BB%B73.png)
  
 二次回归 r-squared 0.867544365635   
 七次回归 r-squared 0.487744074623   
