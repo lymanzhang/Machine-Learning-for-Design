@@ -327,7 +327,23 @@ Y = β X
 
 其中，Y是训练集的响应变量列向量，β是模型参数列向量。X称为设计矩阵，是mXn维训练集的解释变量矩阵。m是训练集样本数量， n是解释变量个数。房屋价格预测模型的训练集如下表所示：
 
+|训练样本|房屋面积（平方米）|周边商户（户数）|房价（人民币万元）|
+|--|--|--|--|
+|1|60|2|70|
+|2|80|1|90|
+|3|100|0|130|
+|4|140|2|175|
+|5|180|0|180|
+
 对应的测试集数据如下：
+
+|训练样本|房屋面积（平方米）|周边商户（户数）|房价（人民币万元）|
+|--|--|--|--|
+|1|80|2|110|
+|2|90|0|85|
+|3|110|2|150|
+|4|160|2|180|
+|5|120|0|110|
 
 我们的学习算法评估三个参数的值：两个相关因子和一个截距。b的求解方法可以通过矩阵运算来实现。
 Y = Xβ
@@ -349,3 +365,70 @@ print(dot(inv(dot(transpose(X), X)), dot(transpose(X), y)))
 [[ 1.1875 ]   
 [ 1.01041667]   
 [ 0.39583333]]  
+
+Numpy也提供了最小二乘法函数来实现这一过程：
+
+```python
+from numpy.linalg import lstsq
+print(lstsq(X, y)[0])
+```
+[[ 1.1875    ]  
+ [ 1.01041667]  
+ [ 0.39583333]]  
+
+有了参数，我们就来更新房屋价格预测模型：
+
+首先，我们只去房屋面积这一单一变量来训练预测模型，看看模型的性能如何。
+```python
+from sklearn.linear_model import LinearRegression
+Xs = [[60], [80], [100], [140], [180]]
+ys = [[70], [90], [130], [175], [180]]
+models = LinearRegression()
+models.fit(Xs, ys)
+Xs_test = [[80], [90], [110], [160], [120]]
+ys_test = [[110], [85], [150], [180], [110]]
+predictionss = models.predict(Xs_test)
+for i, predictions in enumerate(predictionss):
+    print('Predicted: %s, Target: %s' % (predictions, ys_test[i]))
+print('R-squared: %.2f' % models.score(Xs_test, ys_test))
+```
+
+Predicted: [ 97.75862069], Target: [110]  
+Predicted: [ 107.52155172], Target: [85]  
+Predicted: [ 127.04741379], Target: [150]  
+Predicted: [ 175.86206897], Target: [180]  
+Predicted: [ 136.81034483], Target: [110]  
+R-squared: 0.66
+
+测试得到的R<sup>2</sup>值为0.66，拟合度一般，不算理想。
+
+接下来我们引入一个新的变量：周边商户数，看看引入新变量后的多元线性回归的表现如何。
+
+```python
+from sklearn.linear_model import LinearRegression
+X = [[60, 2], [80, 1], [100, 0], [140, 2], [180, 0]]
+y = [[70], [90], [130], [175], [180]]
+model = LinearRegression()
+model.fit(X, y)
+X_test = [[80, 2], [90, 0], [110, 2], [160, 2], [120, 0]]
+y_test = [[110], [85], [150], [180], [110]]
+predictions = model.predict(X_test)
+for i, prediction in enumerate(predictions):
+    print('Predicted: %s, Target: %s' % (prediction, y_test[i]))
+print('R-squared: %.2f' % model.score(X_test, y_test))
+```
+
+Predicted: [ 100.625], Target: [110]  
+Predicted: [ 102.8125], Target: [85]  
+Predicted: [ 130.9375], Target: [150]  
+Predicted: [ 181.45833333], Target: [180]  
+Predicted: [ 133.125], Target: [110]  
+R-squared: 0.77  
+
+测试得到的R<sup>2</sup>值为0.77，拟合度比一元线性回归的效果要好出不少。
+
+增加解释变量让模型拟合效果更好了。后面我们会论述一个问题：为什么只用一个测试集评估一个模型的效果是不准确的，如何通过将测试集数据分块的方法来测试，让模型的测试效果更可靠。不过现在我们可以认为，房屋价格预测问题，多元回归确实比一元回归效果更好。假如解释变量和响应变量的关系不是线性的呢？下面我们来研究一个特别的多元线性回归的情况，可以用来构建非线性关系模型。
+
+### 多项式回归
+上例中，我们假设解释变量和响应变量的关系是线性的。真实情况未必如此。下面我们用多项式回归，一种特殊的多元线性回归方法，增加了指数项（ 的次数大于1）。现实世界中的曲线关系都是通过增加多项式实现的，其实现方式和多元线性回归类似。本例还用一个解释变量，匹萨直径。让我们用下面的数据对两种模型做个比较：
+
