@@ -647,3 +647,6 @@ $ RSS_{lasso} = \sum_{i=1}^{n}{(y_i - x_i^Tβ)^2} + \lambda \sum_{j=1}^p {β_j} 
 LASSO方法会产生稀疏参数，大多数相关系数会变成0，模型只会保留一小部分特征。而岭回归还是会保留大多数尽可能小的相关系数。当两个变量相关时，LASSO方法会让其中一个变量的相关系数会变成0，而岭回归是将两个系数同时缩小。
 
 scikit-learn还提供了弹性网（elastic net）正则化方法，通过线性组合L1和L2兼具LASSO和岭回归的内容。可以认为这两种方法是弹性网正则化的特例。
+
+
+<img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
