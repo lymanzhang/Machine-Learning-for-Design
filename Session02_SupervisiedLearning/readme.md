@@ -650,3 +650,5 @@ scikit-learn还提供了弹性网（elastic net）正则化方法，通过线性
 
 
 <img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
+
+<img src="/cgi-bin/mathtex.cgi?f(x)=\int_{-\infty}^xe^{-t^2}dt"    alt="" border=0 align="middle">
