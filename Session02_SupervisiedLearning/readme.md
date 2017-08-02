@@ -654,3 +654,27 @@ scikit-learn还提供了弹性网（elastic net）正则化方法，通过线性
 <img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
 
 <img src="/cgi-bin/mathtex.cgi?f(x)=\int_{-\infty}^xe^{-t^2}dt"    alt="" border=0 align="middle">
+
+
+## 线性回归应用案例
+前面我们通过一个小例子介绍了线性回归模型。下面我们用一个现实的数据集来应用线性回归算法。假如你去参加聚会，想喝最好的红酒，可以让朋友推荐，不过你觉得他们也不靠谱。作为科学控，你带了pH试纸和一堆测量工具来测酒的理化性质，然后选一个最好的，周围的小伙伴都无语了，你亮瞎了世界。
+
+网上有相关的酒数据集可以参考，UCI机器学习项目的酒数据集收集了1599种酒的测试数据,数据下载链接[在此](http://www3.dsi.uminho.pt/pcortez/wine/winequality.zip)。收集完数据自然要用线性回归来研究一下，响应变量是0-10的整数值，我们也可以把这个问题看成是一个分类问题。不过本章还是把相应变量作为连续值来处理。
+
+### 探索数据
+scikit-learn作为机器学习系统，其探索数据的能力是不能与SPSS和R语言相媲美的。不过我们有Pandas库，可以方便的读取数据，完成描述性统计工作。我们通过描述性统计来设计模型。Pandas引入了R语言的dataframe，一种二维表格式异质（heterogeneous）数据结构。Pandas更多功能请见[文档](http://pandas.pydata.org)，这里只用一部分功能，都很容易使用。
+
+首先，我们读取.csv文件生成dataframe：
+
+```python
+import pandas as pd
+df = pd.read_csv('mlslpic/winequality-red.csv', sep=';')
+df.head()
+```
+
+|-|	fixed acidity|volatile acidity|citric acid|residual sugar|chlorides|free sulfur dioxide|total sulfur dioxide|density|pH|sulphates|alcohol|quality|
+|0|7.4|0.70|0.00|1.9|0.076|11.0|34.0|0.9978|3.51|0.56|9.4|5|
+|1|7.8|0.88|0.00|2.6|0.098|25.0|67.0|0.9968|3.20|0.68|9.8|5|
+|2|7.8|0.76|0.04|2.3|0.092|15.0|54.0|0.9970|3.26|0.65|9.8|5|
+|3|11.2|0.28|0.56|1.9|0.075|17.0|60.0|0.9980|3.16|0.58|9.8|6|
+|4|7.4|0.70|0.00|1.9|0.076|11.0|34.0|0.9978|3.51|0.56|9.4|5|
