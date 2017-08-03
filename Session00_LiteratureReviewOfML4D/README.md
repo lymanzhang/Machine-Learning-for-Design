@@ -58,6 +58,8 @@
 
 [Machine Learning for Designers](http://pan.baidu.com/s/1eSOUudW)
 
+[Machine Learning for Designers 解构脑图](https://zhuanlan.zhihu.com/p/27045885)
+
 [5 Steps to Thinking Like a Designer in Machine Learning](http://machinelearningmastery.com/5-steps-to-thinking-like-a-designer-in-machine-learning/)
 
 [A Machine-Learning Framework for Design for Manufacturability](https://arxiv.org/abs/1703.01499)
@@ -98,3 +100,8 @@
 
 [HOW MACHINE LEARNING CAN SPEED UP YOUR DESIGN CYCLE](https://www.maximintegrated.com/en/design/blog/machine-learning-can-speed-up-design-cycle.html)
 
+[设计与人工智能报告](https://zhuanlan.zhihu.com/p/26610724)
+
+[设计与AI的现在Ⅰ：设计了1.7 亿个 banner的阿里鲁班](https://zhuanlan.zhihu.com/p/26563244)
+
+[为男人们提供个性化服饰搭配，英国电商 Thread 获 800 万美金 A 轮融资](https://36kr.com/p/5036946.html)
