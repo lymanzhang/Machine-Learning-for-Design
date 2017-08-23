@@ -38,3 +38,30 @@
 - [Let’s code a Neural Network from scratch — Part 2](https://medium.com/typeme/lets-code-a-neural-network-from-scratch-part-2-87e209661638)
 
 - [Let’s code a Neural Network from scratch — Part 3](https://medium.com/typeme/lets-code-a-neural-network-from-scratch-part-3-87e23adbe4b6)
+
+## Courses
+
+- [Practical Deep Learning For Coders](http://course.fast.ai/index.html)
+
+- [Deep Learning Part 1: Practical Deep Learning for Coders](http://www.fast.ai/)
+
+- [Deep Learning Part 2: Cutting Edge Deep Learning for Coders](http://course.fast.ai/part2.html)
+
+### Our courses (all are free and have no ads):
+
+- Deep Learning Part 1: [Practical Deep Learning for Coders](http://course.fast.ai/)
+  - [Why we created the course](http://www.fast.ai/2016/10/08/course-background/)
+  - [What we cover in the course](http://www.fast.ai/2016/10/08/curriculum/)
+- Deep Learning Part 2: [Cutting Edge Deep Learning for Coders](http://course.fast.ai/part2.html)
+  - Computational Linear Algebra: Online [textbook](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md) and [Videos](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY)
+  - [Providing a Good Education in Deep Learning](http://www.fast.ai/2016/10/08/teaching-philosophy/)—our teaching philosophy
+  - [A Unique Path to Deep Learning Expertise](http://www.fast.ai/2016/10/08/overview/)—our teaching approach
+
+- [wiki.fast.ai](http://wiki.fast.ai/index.php/How_to_use_the_Provided_Notebooks)
+
+- [github repository - Practical Deep Learning for Coders (fast.ai courses)](https://github.com/fastai/courses)
+
+### Practical Deep Learning for Coders (fast.ai courses)
+
+These are the lecture materials from [Practical Deep Learning for Coders](http://course.fast.ai/). Two important parts of the course are  [our online forums](http://forums.fast.ai/) and [our wiki](http://wiki.fast.ai/index.php/Main_Page).  If you are encountering an error, we recommend that you first search the forums and wiki for a solution.  If you can't find the answer there, the next step is to ask your question on the forums.  See this advice on [how to ask for help](http://wiki.fast.ai/index.php/How_to_ask_for_Help) in a way that will allow others to most quickly and effectively be able to help you.  Please don't use Github Issues to ask for help debugging (many questions have already been answered in the forums).
+
