@@ -39,6 +39,8 @@
 
 - [Let’s code a Neural Network from scratch — Part 3](https://medium.com/typeme/lets-code-a-neural-network-from-scratch-part-3-87e23adbe4b6)
 
+- [Deep Learning Mindmap / Cheatsheet](https://github.com/dformoso/deeplearning-mindmap)
+
 ## Courses
 
 - [Practical Deep Learning For Coders](http://course.fast.ai/index.html)
