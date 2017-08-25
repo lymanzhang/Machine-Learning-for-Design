@@ -43,7 +43,15 @@
 
 - [How to create a Neural Network in JavaScript in only 30 lines of code](https://medium.freecodecamp.org/how-to-create-a-neural-network-in-javascript-in-only-30-lines-of-code-343dafc50d49)
 
+## Online Books
+
+- [An MIT Press book: Deep Learning](http://www.deeplearningbook.org/) By Ian Goodfellow and Yoshua Bengio and Aaron Courville
+
+- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) By [Michael Nielsen](http://michaelnielsen.org/) / Aug 2017
+
 ## Courses
+
+# course.fast.ai: Deep Learning Part 1 + 2
 
 - [Practical Deep Learning For Coders](http://course.fast.ai/index.html)
 
