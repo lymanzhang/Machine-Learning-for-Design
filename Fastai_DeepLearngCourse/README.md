@@ -5,4 +5,6 @@ These are the lecture materials from [Practical Deep Learning for Coders](http:/
 
 ### [deeplearning course 1](https://github.com/fastai/courses/tree/master/deeplearning1/nbs)
 
+- 00 [convolution introduction](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/Fastai_DeepLearngCourse/convolution-intro.ipynb)
+
 ### [deeplearning course 2](https://github.com/fastai/courses/tree/master/deeplearning2)
