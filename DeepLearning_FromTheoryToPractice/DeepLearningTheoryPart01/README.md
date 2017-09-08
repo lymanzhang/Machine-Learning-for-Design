@@ -1,6 +1,6 @@
 ## Deep Neural Networks. Theory. Part 1.
 
-[!Deep Neural Network](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Deep%20Neural%20Network.png)
+[!Deep Neural Network](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Deep%20Neural%20Network.jpg)
 
 Deep Neural Network
 
@@ -27,43 +27,47 @@ One more thing. Always check a dataset manually before using it. There are alway
 
 ### PERCEPTRONS IN ACTION
 
-[!Perceptron in Action](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Perceptron%20in%20Action.png)
+[!Perceptron in Action](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Perceptron%20in%20Action.jpg)
 
 Perceptron in Action
 
 So how do we use all that weights? The simplest approach is a linear combination of all incoming weights multiplied by their inputs. We will use w for an individual weight and W for a matrix of weights. We express linear combination as a sum:
 
-[!sum](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/sum.png)
+[!sum](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/sum.jpg)
 
 sum
 
 Then we should emit an output signal from a perceptron. We can use simple step function as a trigger — Heaviside Step Function — we call it Activation Function
 
-[!Heaviside step function](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Heaviside%20step%20function.png)
+[!Heaviside step function](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Heaviside%20step%20function.jpg)
 
 Heaviside step function
 
-[!Yet another way to define Heaviside step function](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Yet%20another%20way%20to%20define%20Heaviside%20step%20function.png)
+[!Yet another way to define Heaviside step function](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Yet%20another%20way%20to%20define%20Heaviside%20step%20function.jpg)
 
 Yet another way to define Heaviside step function
 
 So when we have a sum of weights*inputs less than zero — perceptron should say No. If more than 1 — Yes. That’s all we need from perceptron for now. Yes or No. But what if we need to move a step to bigger or smaller values? We shoud add Bias. This is just a value which will move our function higher or lower. Now Perceptron formula is. It looks like a linear regression, yeah?
 
-[!Perceptron Formula](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Perceptron%20Formula.png)
+[!Perceptron Formula](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Perceptron%20Formula.jpg)
 
 Perceptron Formula
 
 There are more different activation functions like tanh, sigmoid, softmax etc. Let’s look at sigmoid. We will use. Why? Because in compare to Heaviside function we can take a derivative from sigmoid.
 
-[!Sigmoid function](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Sigmoid%20function.png)
+[!Sigmoid function](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Sigmoid%20function.jpg)
 
 Sigmoid function
+
+[!Sigmoid fomula](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/Sigmoid%20fomula.jpg)
+
+Sigmoid fomula
 
 ### UNKNOWN WEIGHTS
 
 Probably you want to say — we don’t know weights. How do we calculate all this stuff? Yes, we need to define a metrics of how wrong the prediction is. A common metrics is a Sum of Squared Error (SSE)
 
-[!SSE](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/SSE.png)
+[!SSE](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/SSE.jpg)
 
 SSE
 
@@ -71,6 +75,6 @@ Where y — is a real value and y-hat — is a prediction, j — all
 
 We remember that prediction is a function of sum of multiplications of weights and inputs(say, depends on weights), than finally error is
 
-[!SSE2](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/SSE2.png)
+[!SSE2](https://github.com/lymanzhang/Machine-Learning-for-Design/blob/master/DeepLearning_FromTheoryToPractice/DeepLearningTheoryPart01/images/SSE2.jpg)
 
 and it should be as low as possible.
