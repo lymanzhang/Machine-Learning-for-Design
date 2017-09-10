@@ -70,6 +70,12 @@
 
 -------------------------------------------------------------------
 
+## 机器学习竞赛+数据
+
+- [kaggle](https://www.kaggle.com/)
+
+-------------------------------------------------------------------
+
 ## Other Topics related to ML and Design
 
 [Machine Learning for Designers](http://www.oreilly.com/design/free/machine-learning-for-designers.csp)
