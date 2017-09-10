@@ -48,9 +48,27 @@
 
 ### Project List
 
+- [Machine Learning Algorithm for Flappy Bird using Neural Network and Genetic Algorithm](http://www.askforgametask.com/tutorial/machine-learning-algorithm-flappy-bird/)
 
 -------------------------------------------------------------------
 
+## 机器学习图解
+
+- 解释卷积神经网络 [Image Kernels](http://setosa.io/ev/image-kernels/)
+
+- 结束卷积核 [Sobel operator](https://en.wikipedia.org/wiki/Sobel_operator)
+
+- [Neural Network](http://www.emergentmind.com/neural-network)
+
+- [How machine learning works](https://brohrer.github.io/blog.html)
+
+-------------------------------------------------------------------
+
+## 机器学习论文
+
+- [arXiv.org](https://arxiv.org/)
+
+-------------------------------------------------------------------
 
 ## Other Topics related to ML and Design
 
@@ -105,3 +123,7 @@
 [设计与AI的现在Ⅰ：设计了1.7 亿个 banner的阿里鲁班](https://zhuanlan.zhihu.com/p/26563244)
 
 [为男人们提供个性化服饰搭配，英国电商 Thread 获 800 万美金 A 轮融资](https://36kr.com/p/5036946.html)
+
+[CreativeAI On the Democratisation & Escalation of Creativity — Chapter 01](https://medium.com/@creativeai/creativeai-9d4b2346faf3)
+
+[Rethinking Design Tools in the Age of Machine Learning](https://medium.com/artists-and-machine-intelligence/rethinking-design-tools-in-the-age-of-machine-learning-369f3f07ab6c)
