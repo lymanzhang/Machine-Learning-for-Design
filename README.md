@@ -117,4 +117,4 @@ Wikipedia links:
   * [design is evolving](https://medium.com/search?q=design%20is%20evolving)
   * [Creative AI: On the Democratisation & Escalation of Creativity](https://medium.com/@creativeai/creativeai-9d4b2346faf3)
   * [An intro to Machine Learning for designers](https://uxdesign.cc/an-intro-to-machine-learning-for-designers-5c74ba100257)
-  
+  * [Natural vs Artificial Neural Networks](https://becominghuman.ai/natural-vs-artificial-neural-networks-9f3be2d45fdb)
