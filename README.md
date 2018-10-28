@@ -118,3 +118,7 @@ Wikipedia links:
   * [Creative AI: On the Democratisation & Escalation of Creativity](https://medium.com/@creativeai/creativeai-9d4b2346faf3)
   * [An intro to Machine Learning for designers](https://uxdesign.cc/an-intro-to-machine-learning-for-designers-5c74ba100257)
   * [Natural vs Artificial Neural Networks](https://becominghuman.ai/natural-vs-artificial-neural-networks-9f3be2d45fdb)
+  * [Neural Nets for Generating Music](https://medium.com/artists-and-machine-intelligence/neural-nets-for-generating-music-f46dffac21c0)
+  * [From deep learning down](https://medium.com/@genekogan/from-deep-learning-down-85e527a5fe7b)
+  * [Neural Networks Are Learning What to Remember and What to Forget](https://medium.com/mit-technology-review/neural-networks-are-learning-what-to-remember-and-what-to-forget-e91891b43702)
+  
