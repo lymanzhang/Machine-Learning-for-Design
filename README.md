@@ -108,3 +108,13 @@ Wikipedia links:
 ## 项目样例/项目作业
   * [All code examples](https://github.com/lymanzhang/Machine-Learning-for-Design)
   * [Week 1 Homework](https://github.com/lymanzhang/Machine-Learning-for-Design)
+
+## 机器学习与设计进化/新的参考网页
+  * [Designing with AI, Machine Learning and the Power of White Space](https://medium.com/ltuxlondon/designing-with-ai-machine-learning-and-the-power-of-white-space-8a3682de6b33)
+  * [AI and the Future of Design: What will the designer of 2025 look like?](https://medium.com/@artefactgroup/ai-and-the-future-of-design-what-will-the-designer-of-2025-look-like-b27ad0f6ef3a)
+  * [5 thoughts on design and AI](https://medium.com/digital-leaders-uk/5-thoughts-on-design-and-ai-b36f7bc707e3)
+  * [design and machine learning](https://medium.com/search?q=design%20and%20machine%20learning)
+  * [design is evolving](https://medium.com/search?q=design%20is%20evolving)
+  * [Creative AI: On the Democratisation & Escalation of Creativity](https://medium.com/@creativeai/creativeai-9d4b2346faf3)
+  * [An intro to Machine Learning for designers](https://uxdesign.cc/an-intro-to-machine-learning-for-designers-5c74ba100257)
+  
